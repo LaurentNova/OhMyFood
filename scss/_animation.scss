@@ -1,0 +1,140 @@
+@use "variables" as vars;
+@use "mixins" as mix;
+
+/* ---------- BOUTON ---------- */
+.btn-explore {
+  padding: 14px 32px;
+  border-radius: 50px;
+  background: linear-gradient(180deg, #ff79da, #9356dc);
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: background 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+/* état hover */
+.btn-explore:hover {
+  background: linear-gradient(180deg, #ff93e1, #a46ae0);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.30);
+}
+
+/* ---------- COEUR ---------- */
+/* Animation de remplissage du cœur */
+.like-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 28px;
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+}
+
+.like-btn i {
+  color: #000000;    // Cœur vide (noir)
+  transition: opacity 0.4s ease-in-out;
+  position: relative;
+}
+
+/* Le cœur rempli en gradient */
+.like-btn i::after {
+  content: "\f004";   // même icône FA heart
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: transparent;
+  background: linear-gradient(45deg, vars.$color-secondary, vars.$color-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+/* Hover = remplissage progressif */
+.like-btn:hover i::after {
+  opacity: 1;
+}
+
+/* ---------- LOADER ---------- */
+/* Loader - rotation */
+@keyframes loader-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Loader - reste visible puis disparaît */
+@keyframes loader-hide {
+  0%,
+  70% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.loader {
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: loader-hide 2.5s ease-out forwards; /* durée 1–3s OK */
+}
+
+.loader__circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 4px solid #f2f2f2;     
+  border-top-color: vars.$color-primary; 
+  border-right-color: vars.$color-secondary;
+  animation: loader-spin 0.8s linear infinite;
+}
+
+
+/* ---------- ANIMATION PAGE DES RESTAURANTS / AFFICHAGE DES MENUS ---------- */
+@keyframes menu-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ---------- ANIMATION DES LIGNES DE PLATS ---------- */
+.menu-item-check i {
+  color: white;
+  font-size: 20px;
+  transform: rotate(-180deg);
+  transition: transform 0.4s;
+}
+
+.menu-item:hover .menu-item-check {
+  width: 60px;
+}
+
+.menu-item:hover .menu-item-check i {
+  transform: rotate(0deg);
+}
+
+
+.menu-item-text h4,
+.menu-item-text p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

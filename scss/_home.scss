@@ -1,0 +1,107 @@
+@use "variables" as vars;
+@use "mixins" as mix;
+
+/* Section localisation */
+.location {
+  background-color: #eaeaea;
+  @include mix.flex-center;
+  gap: 0.5rem;
+  padding: 0.8rem 0;
+
+  p {
+    font-weight: 500;
+  }
+
+  i {
+    color: #353535;
+  }
+}
+
+/* Hero (bloc de présentation) */
+.hero {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background-color: #f6f6f6;
+
+  h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-explore {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 2rem;
+    background: linear-gradient(
+      135deg,
+      vars.$color-secondary,
+      vars.$color-primary
+    );
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+}
+
+/* Section Fonctionnement */
+.steps {
+  padding: 2rem 1.5rem;
+  background-color: white;
+
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .step {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #f6f6f6;
+    padding: 1rem 1.5rem 1rem 2.8rem;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+    @include mix.shadow;
+    font-weight: 500;
+  }
+
+  .step-number {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: vars.$color-primary;
+    color: white;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+
+  i {
+    font-size: 1.2rem;
+    color: #7e7e7e;
+  }
+
+  i.fa-store {
+    color: vars.$color-primary;
+  }
+}
+
+/* Section restaurants (liste sur la home) */
+.restaurants {
+  padding: 2rem 1.5rem;
+  background-color: vars.$color-bg;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+}
+

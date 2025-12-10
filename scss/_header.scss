@@ -1,0 +1,32 @@
+@use "variables" as vars;
+@use "mixins" as mix;
+
+/* Header */
+header {
+
+    @include mix.shadow;
+
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #ffffff;
+
+    h1 {
+        font-family: vars.$font-title;
+        font-size: 1.7rem;
+    }
+
+    .back-link {
+    position: absolute;
+    left: 1.2rem;
+    top: 1rem;
+    font-size: 1.2rem;
+    color: vars.$color-text;
+  }
+}
+
+.restaurant-header {
+  position: relative;
+  background-color: vars.$color-bg;
+  padding: 1.2rem 0;
+}
+

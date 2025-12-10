@@ -1,0 +1,55 @@
+@use "variables" as vars;
+
+/* Typo globale */
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: vars.$font-main;
+  line-height: 1.5;
+}
+
+/* Titres */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
+}
+
+/* Liens */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Paragraphes */
+p {
+  font-size: 1rem;
+}
+
+/* Listes */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Conteneur générique */
+.main-container {
+  max-width: 1200px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Images globales */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

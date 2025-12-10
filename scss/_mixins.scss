@@ -1,0 +1,30 @@
+/* Mixins génériques */
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin shadow {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+@mixin radius {
+  border-radius: 1.5rem;
+}
+
+@mixin underline-title($color) {
+  width: 40px;
+  height: 3px;
+  background-color: $color;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+@mixin card {
+  background-color: #fff;
+  border-radius: 0.9rem;
+  padding: 0.9rem 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
