@@ -3,19 +3,23 @@
 
 /* Header */
 header {
+  @include mix.shadow;
+  position: relative;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #ffffff;
 
-    @include mix.shadow;
+  .logo {
+    display: inline-block;
+  }
 
-    text-align: center;
-    padding: 1rem 0;
-    background-color: #ffffff;
+  .logo img {
+    height: 30px;
+    width: auto;
+    display: block;
+  }
 
-    h1 {
-        font-family: vars.$font-title;
-        font-size: 1.7rem;
-    }
-
-    .back-link {
+  .back-link {
     position: absolute;
     left: 1.2rem;
     top: 1rem;
@@ -23,10 +27,3 @@ header {
     color: vars.$color-text;
   }
 }
-
-.restaurant-header {
-  position: relative;
-  background-color: vars.$color-bg;
-  padding: 1.2rem 0;
-}
-

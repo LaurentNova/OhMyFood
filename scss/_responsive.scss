@@ -55,9 +55,7 @@
   /* ---------- LOCALISATION ---------- */
 
   .location {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include mix.flex-center;
     gap: .8rem;
     padding: 1rem 0;
     background-color: #eaeaea;
@@ -198,7 +196,7 @@
   /* ---------- FOOTER ---------- */
 
   .footer {
-    background: #353535;
+    background: vars.$color-text;
     padding: 30px 60px;
     display: flex !important;
     align-items: center;
@@ -221,7 +219,7 @@
 
 
   btn-explore:hover {
-      background: linear-gradient(180deg, #ff93e1, #a46ae0);
+      background: linear-gradient(180deg, vars.$color-secondary, vars.$color-primary);
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
       transform: translateY(-2px);
 

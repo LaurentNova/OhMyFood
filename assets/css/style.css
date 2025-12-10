@@ -84,13 +84,18 @@ html, body {
 /* Header */
 header {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  position: relative;
   text-align: center;
   padding: 1rem 0;
   background-color: #ffffff;
 }
-header h1 {
-  font-family: "Shrikhand", cursive;
-  font-size: 1.7rem;
+header .logo {
+  display: inline-block;
+}
+header .logo img {
+  height: 30px;
+  width: auto;
+  display: block;
 }
 header .back-link {
   position: absolute;
@@ -98,12 +103,6 @@ header .back-link {
   top: 1rem;
   font-size: 1.2rem;
   color: #353535;
-}
-
-.restaurant-header {
-  position: relative;
-  background-color: #f6f6f6;
-  padding: 1.2rem 0;
 }
 
 .footer {
@@ -149,14 +148,14 @@ header .back-link {
   color: #353535;
 }
 
-/* Hero (bloc de présentation) */
+/* Hero */
 .hero {
   text-align: center;
   padding: 2rem 1.5rem;
   background-color: #f6f6f6;
 }
-.hero h2 {
-  font-size: 1.6rem;
+.hero h1 {
+  font-size: 1.7rem;
   margin-bottom: 0.5rem;
 }
 .hero p {
@@ -203,8 +202,8 @@ header .back-link {
   width: 28px;
   height: 28px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   font-size: 0.9rem;
 }
 .steps i {
@@ -308,7 +307,7 @@ img {
   justify-content: space-between;
   margin-bottom: 1.5rem;
 }
-.menu-title h2 {
+.menu-title h1 {
   font-family: "Shrikhand", cursive;
   font-size: 1.7rem;
 }
@@ -393,7 +392,7 @@ img {
   position: relative;
   display: flex;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 15px;
   padding: 15px 20px;
   overflow: hidden;
@@ -433,15 +432,15 @@ img {
   width: 80px;
   background-color: #99e2d0;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   border-radius: 0 15px 15px 0;
   transition: right 0.3s ease;
 }
 
 /* Coche dans un rond blanc */
 .menu-item-check .fa-check {
-  background-color: #ffffff;
+  background-color: #fff;
   color: #99e2d0;
   border-radius: 50%;
   padding: 6px;
@@ -568,8 +567,8 @@ img {
   /* ---------- LOCALISATION ---------- */
   .location {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 0.8rem;
     padding: 1rem 0;
     background-color: #eaeaea;
@@ -711,7 +710,7 @@ img {
     margin-left: 30px;
   }
   btn-explore:hover {
-    background: linear-gradient(180deg, #ff93e1, #a46ae0);
+    background: linear-gradient(180deg, #ff79da, #9356dc);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
     transform: translateY(-2px);
   }
@@ -796,13 +795,12 @@ img {
   position: fixed;
   inset: 0;
   /* top:0; right:0; bottom:0; left:0 */
-  background: #ffffff;
+  background: #fff;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   z-index: 9999;
   animation: loader-hide 2.5s ease-out forwards;
-  /* durée 1–3s OK */
 }
 
 .loader__circle {

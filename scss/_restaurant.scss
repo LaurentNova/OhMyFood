@@ -31,7 +31,7 @@
     justify-content: space-between;
     margin-bottom: 1.5rem;
 
-    h2 {
+    h1 {
         font-family: vars.$font-title;
         font-size: 1.7rem;
     }
@@ -126,7 +126,7 @@ $menu-check-width: 80px;
     position: relative;
     display: flex;
     align-items: center;
-    background-color: #ffffff;
+    background-color: #fff;
     border-radius: 15px;
     padding: 15px 20px;
     overflow: hidden;
@@ -166,16 +166,14 @@ $menu-check-width: 80px;
     right: -$menu-check-width;
     width: $menu-check-width;
     background-color: vars.$color-tertiary;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include mix.flex-center;
     border-radius: 0 15px 15px 0;
     transition: right 0.3s ease;
 }
 
 /* Coche dans un rond blanc */
 .menu-item-check .fa-check {
-    background-color: #ffffff;
+    background-color: #fff;
     color: vars.$color-tertiary;
     border-radius: 50%;
     padding: 6px;

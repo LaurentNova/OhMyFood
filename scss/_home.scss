@@ -13,18 +13,18 @@
   }
 
   i {
-    color: #353535;
+    color: vars.$color-text;
   }
 }
 
-/* Hero (bloc de présentation) */
+/* Hero */
 .hero {
   text-align: center;
   padding: 2rem 1.5rem;
-  background-color: #f6f6f6;
+  background-color: vars.$color-bg;
 
-  h2 {
-    font-size: 1.6rem;
+  h1 {
+    font-size: 1.7rem;
     margin-bottom: 0.5rem;
   }
 
@@ -61,9 +61,9 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    background-color: #f6f6f6;
+    background-color: vars.$color-bg;
     padding: 1rem 1.5rem 1rem 2.8rem;
-    border-radius: 1.5rem;
+    @include mix.radius;
     margin-bottom: 1rem;
     @include mix.shadow;
     font-weight: 500;
@@ -79,9 +79,7 @@
     border-radius: 50%;
     width: 28px;
     height: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include mix.flex-center;
     font-size: 0.9rem;
   }
 
