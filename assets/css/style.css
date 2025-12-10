@@ -448,7 +448,8 @@ img {
   font-size: 0.9rem;
   opacity: 0;
   transform: scale(0.5);
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  display: inline-block;
+  transition: opacity 0.3s ease, transform 0.6s ease;
 }
 
 /* HOVER : le bloc vert glisse, le prix se décale, la coche apparaît */
@@ -462,7 +463,7 @@ img {
 
 .menu-item:hover .menu-item-check .fa-check {
   opacity: 1;
-  transform: scale(1);
+  transform: scale(1) rotate(360deg);
 }
 
 .menu-item:hover .menu-item-text {
@@ -793,13 +794,15 @@ img {
 }
 .loader {
   position: fixed;
-  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  inset: 0;
+  /* top:0; right:0; bottom:0; left:0 */
   background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  animation: loader-hide 2.5s ease-out forwards; /* durée 1–3s OK */
+  animation: loader-hide 2.5s ease-out forwards;
+  /* durée 1–3s OK */
 }
 
 .loader__circle {
