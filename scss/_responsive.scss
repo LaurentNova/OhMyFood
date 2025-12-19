@@ -8,11 +8,6 @@
 
 @media (min-width: 768px) {
 
-  /* Conteneur principal */
-  main {
-    max-width: 900px;
-    margin: 0 auto;
-  }
 
   /* Section "Fonctionnement" : on commence à étirer un peu */
   .steps {
@@ -30,12 +25,6 @@
 
   body {
     background-color: vars.$color-bg;
-  }
-
-  main {
-    max-width: 1440px;
-    margin: 0 auto;
-    background-color: #fff;
   }
 
   /* ---------- HEADER ---------- */
@@ -149,6 +138,11 @@
     background-color: vars.$color-bg;
   }
 
+  .restaurant-menu {
+    width: 80%;
+    margin: -1rem auto 0 auto;
+  }
+
   .restaurants h2 {
     grid-column: 1 / -1;
     margin-bottom: .5rem;
@@ -209,19 +203,19 @@
     margin-bottom: 0;
   }
 
-    .footer_nav {
-      flex-direction: row !important;
-    }
+  .footer_nav {
+    flex-direction: row !important;
+  }
 
-    .footer_nav a+a {
-      margin-left: 30px;
-    }
+  .footer_nav a+a {
+    margin-left: 30px;
+  }
 
 
   btn-explore:hover {
-      background: linear-gradient(180deg, vars.$color-secondary, vars.$color-primary);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-      transform: translateY(-2px);
+    background: linear-gradient(180deg, vars.$color-secondary, vars.$color-primary);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    transform: translateY(-2px);
 
 
   }

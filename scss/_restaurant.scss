@@ -4,7 +4,7 @@
 /* PAGES RESTAURANTS - Menus */
 
 .restaurant-page {
-    background-color: vars.$color-bg;
+    background-color: white;
 }
 
 /* Image de couverture */
@@ -28,8 +28,10 @@
 .menu-title {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 16px;
     margin-bottom: 1.5rem;
+    position: relative;
 
     h1 {
         font-family: vars.$font-title;
@@ -42,6 +44,7 @@
         padding: 0;
         font-size: 1.7rem;
         cursor: pointer;
+        position: static;
 
         i {
             color: transparent;
